@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "e2aa6a9f-ece6-481c-ab4b-6568d1e1df46",
+		"name": "Dentist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46045424",
+		"_collection_link": "https://siidharth-7136515.postman.co/workspace/Siidharth's-Workspace~f037a604-c03e-45fe-8403-b09a5597282e/collection/46045424-e2aa6a9f-ece6-481c-ab4b-6568d1e1df46?action=share&source=collection_link&creator=46045424"
+	},
+	"item": [
+		{
+			"name": "https://partner-dev-benefits.plansource.com/logon",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//To ensure the response code is 200\r",
+							"pm.test(\"Response code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "cache-control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "content-type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "origin",
+						"value": "https://partner-dev-benefits.plansource.com"
+					},
+					{
+						"key": "priority",
+						"value": "u=0, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://partner-dev-benefits.plansource.com/logon"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "document"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "navigate"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "sec-fetch-user",
+						"value": "?1"
+					},
+					{
+						"key": "upgrade-insecure-requests",
+						"value": "1"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Cookie",
+						"value": "visid_incap_2769573=WxaPuifiRlGOreiTgcBBkr2zU2gAAAAAQUIPAAAAAABFCToFHD/elmOJhRKMpsC6; external_logon_page=; incap_ses_49_2769573=uhjRZrgK2QO95Lx4kRWuAFhmVGgAAAAALLZk4VZVvEmQlB7GPrbR2A==; _device_id=FKlUp5eY%2BwktAq6ZppuTlQ3H6zmY7QAiuHmJ%2F7fzu8bQ%2Fn3KenjtgpSCZ0LNAY70%2B5Ees6PLuaAY7Tvt3d6iQr8xoxY8xUGj1B22LeUJ1uGs6hKFvUi6fwgqf0WVCLKfZukDdAHkBg5cZANb%2BNG%2FJ%2F7HPrneempDol52kQG63PNE0crphWVBZdC%2FN22py8QaYb%2FXocIg4KhAbfj7ndCX2Chz--aBD3pjaMUwTyr2d1--13deUvUIFI6tzfrFpZW1Zw%3D%3D; _session_id=d983351735965cdad897a4b76f6af375"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "authenticity_token",
+							"value": "3PSD2J55S4WdBSn1qDx73tM5/N/P7JfFE71KWfBHjcUKXKI/EVEqOuMW9hrtj2dW7kPB0Fy7sV0w/TOtu+o5Zw==",
+							"type": "text"
+						},
+						{
+							"key": "user_name",
+							"value": "{{user_name}}",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "{{password}}",
+							"type": "text"
+						},
+						{
+							"key": "password_enc",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://partner-dev-benefits.plansource.com/logon",
+					"protocol": "https",
+					"host": [
+						"partner-dev-benefits",
+						"plansource",
+						"com"
+					],
+					"path": [
+						"logon"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://partner-dev-benefits.plansource.com/logon' \\\r\n  -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7' \\\r\n  -H 'accept-language: en-US,en;q=0.9' \\\r\n  -H 'cache-control: max-age=0' \\\r\n  -H 'content-type: application/x-www-form-urlencoded' \\\r\n  -b 'visid_incap_2769573=WxaPuifiRlGOreiTgcBBkr2zU2gAAAAAQUIPAAAAAABFCToFHD/elmOJhRKMpsC6; external_logon_page=; incap_ses_49_2769573=uhjRZrgK2QO95Lx4kRWuAFhmVGgAAAAALLZk4VZVvEmQlB7GPrbR2A==; _device_id=FKlUp5eY%2BwktAq6ZppuTlQ3H6zmY7QAiuHmJ%2F7fzu8bQ%2Fn3KenjtgpSCZ0LNAY70%2B5Ees6PLuaAY7Tvt3d6iQr8xoxY8xUGj1B22LeUJ1uGs6hKFvUi6fwgqf0WVCLKfZukDdAHkBg5cZANb%2BNG%2FJ%2F7HPrneempDol52kQG63PNE0crphWVBZdC%2FN22py8QaYb%2FXocIg4KhAbfj7ndCX2Chz--aBD3pjaMUwTyr2d1--13deUvUIFI6tzfrFpZW1Zw%3D%3D; _session_id=d983351735965cdad897a4b76f6af375' \\\r\n  -H 'origin: https://partner-dev-benefits.plansource.com' \\\r\n  -H 'priority: u=0, i' \\\r\n  -H 'referer: https://partner-dev-benefits.plansource.com/logon' \\\r\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: document' \\\r\n  -H 'sec-fetch-mode: navigate' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'sec-fetch-user: ?1' \\\r\n  -H 'upgrade-insecure-requests: 1' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36' \\\r\n  --data-raw 'authenticity_token=3PSD2J55S4WdBSn1qDx73tM5%2FN%2FP7JfFE71KWfBHjcUKXKI%2FEVEqOuMW9hrtj2dW7kPB0Fy7sV0w%2FTOtu%2Bo5Zw%3D%3D&user_name=plansource_test_admin&password=password123&password_enc='"
+			},
+			"response": []
+		},
+		{
+			"name": "https://partner-dev-benefits.plansource.com/v1/self_service/cart/coverages",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//To ensure the response code is 200\r",
+							"pm.test(\"Response code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"//To ensure the reponse is Success\r",
+							"const jsonData = pm.response.json();\r",
+							"pm.test(\"Status is success\", function () {\r",
+							"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Coverage ID should not be null\", function () {\r",
+							"    pm.expect(jsonData.data.coverage_id).to.not.be.null;\r",
+							"    pm.expect(jsonData.data.coverage_id).to.not.eql(undefined);\r",
+							"});\r",
+							"\r",
+							"//to ensure the Coverage id in not null\r",
+							"pm.test(\"Coverage ID should not be null\", function () {\r",
+							"    pm.expect(jsonData.data.coverage_id).to.not.be.null;\r",
+							"    pm.expect(jsonData.data.coverage_id).to.not.eql(undefined);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"\r",
+							"const cookies = pm.cookies.toObject();\r",
+							"console.log(cookies);\r",
+							"\r",
+							"\r",
+							"const sessionCookie = pm.cookies.get(\"session_id\");\r",
+							"console.log(sessionCookie);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					},
+					{
+						"key": "origin",
+						"value": "https://partner-dev-benefits.plansource.com"
+					},
+					{
+						"key": "priority",
+						"value": "u=1, i"
+					},
+					{
+						"key": "referer",
+						"value": "https://partner-dev-benefits.plansource.com/subscriber/benefits/current/plan/319900164?orgBenefitId=121137668"
+					},
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\""
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "sec-fetch-dest",
+						"value": "empty"
+					},
+					{
+						"key": "sec-fetch-mode",
+						"value": "cors"
+					},
+					{
+						"key": "sec-fetch-site",
+						"value": "same-origin"
+					},
+					{
+						"key": "user-agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "x-csrf-token",
+						"value": "jVVZGxf7XlxQxumplAwKjeQyhFiivelnSPXiarHmhW5q4lttPtyMuSQ0qARhjjGb1EoXnO7hzTp3KoiMR2salw=="
+					},
+					{
+						"key": "Cookie",
+						"value": "visid_incap_2769573=WxaPuifiRlGOreiTgcBBkr2zU2gAAAAAQUIPAAAAAABFCToFHD/elmOJhRKMpsC6; external_logon_page=; incap_ses_49_2769573=uhjRZrgK2QO95Lx4kRWuAFhmVGgAAAAALLZk4VZVvEmQlB7GPrbR2A==; _session_id=4fe927cd5ded1673af95e7c647649496; _device_id=VRcjmPtyoVlyWq6XWl%2B861%2FxzIYSyBXVsJaFcrTb3FAUUVeSDIgYTcPZUVmwxCdD2t6RDqsDAmsDA6XH4vxnEqLFF7mZFy7r6Zm6559OPUTqsiXU%2BcOgd2O8HPh2V9MinEyUOiyBvrwIz5HXUByluGHRXDkQU1S3UyN18FABmqVZtRs9OpVPsgGva0EhTQyioN1I8ob1LvoCH1PBVYZ0VTJM--5IrFQznrr5DyznuS--%2B%2Fj77HLCP7WRWfIrrAOrFw%3D%3D"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"enrollment_context_type\":\"initial\",\"org_benefit_id\":121137668,\"election\":{\"dependent_ids\":[36186116],\"org_plan_id\":319900164,\"coverage_level_id\":459},\"life_event_completed\":false}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://partner-dev-benefits.plansource.com/v1/self_service/cart/coverages",
+					"protocol": "https",
+					"host": [
+						"partner-dev-benefits",
+						"plansource",
+						"com"
+					],
+					"path": [
+						"v1",
+						"self_service",
+						"cart",
+						"coverages"
+					]
+				},
+				"description": "Generated from cURL: curl 'https://partner-dev-benefits.plansource.com/v1/self_service/cart/coverages' \\\r\n  -X 'PUT' \\\r\n  -H 'accept: */*' \\\r\n  -H 'accept-language: en-US,en;q=0.9' \\\r\n  -H 'content-type: application/json' \\\r\n  -b 'visid_incap_2769573=WxaPuifiRlGOreiTgcBBkr2zU2gAAAAAQUIPAAAAAABFCToFHD/elmOJhRKMpsC6; external_logon_page=; incap_ses_49_2769573=uhjRZrgK2QO95Lx4kRWuAFhmVGgAAAAALLZk4VZVvEmQlB7GPrbR2A==; _session_id=4fe927cd5ded1673af95e7c647649496; _device_id=VRcjmPtyoVlyWq6XWl%2B861%2FxzIYSyBXVsJaFcrTb3FAUUVeSDIgYTcPZUVmwxCdD2t6RDqsDAmsDA6XH4vxnEqLFF7mZFy7r6Zm6559OPUTqsiXU%2BcOgd2O8HPh2V9MinEyUOiyBvrwIz5HXUByluGHRXDkQU1S3UyN18FABmqVZtRs9OpVPsgGva0EhTQyioN1I8ob1LvoCH1PBVYZ0VTJM--5IrFQznrr5DyznuS--%2B%2Fj77HLCP7WRWfIrrAOrFw%3D%3D' \\\r\n  -H 'origin: https://partner-dev-benefits.plansource.com' \\\r\n  -H 'priority: u=1, i' \\\r\n  -H 'referer: https://partner-dev-benefits.plansource.com/subscriber/benefits/current/plan/319900164?orgBenefitId=121137668' \\\r\n  -H 'sec-ch-ua: \"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"' \\\r\n  -H 'sec-ch-ua-mobile: ?0' \\\r\n  -H 'sec-ch-ua-platform: \"Windows\"' \\\r\n  -H 'sec-fetch-dest: empty' \\\r\n  -H 'sec-fetch-mode: cors' \\\r\n  -H 'sec-fetch-site: same-origin' \\\r\n  -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36' \\\r\n  -H 'x-csrf-token: jVVZGxf7XlxQxumplAwKjeQyhFiivelnSPXiarHmhW5q4lttPtyMuSQ0qARhjjGb1EoXnO7hzTp3KoiMR2salw==' \\\r\n  --data-raw '{\"enrollment_context_type\":\"initial\",\"org_benefit_id\":121137668,\"election\":{\"dependent_ids\":[36186116],\"org_plan_id\":319900164,\"coverage_level_id\":459},\"life_event_completed\":false}'"
+			},
+			"response": []
+		}
+	]
+}
