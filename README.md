@@ -1,5 +1,5 @@
 # Plansoure-Dentist
-I have attached only the Part that include the API and I'm not a UI automation Tester [Performance Engineer]
+I have attached only the Part that include the API and I'm not a UI automation Tester [Performance Engineer].
 Please config the CSV data set in Runner--> select file--> select the file with appropriate path --> Drag this collection and execute
 
 output Screenshot1
